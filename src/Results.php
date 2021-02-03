@@ -45,7 +45,7 @@ class Results
 
         // Check if any errors exist, and throw exception if they do
         if ($asArray) $containsErrors = array_key_exists('errors', $this->results);
-        else $containsErrors = isset($this->results->errors);
+        else $containsErrors = count($this->results->errors) > 0;
 
         if ($containsErrors) {
 
